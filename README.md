@@ -26,3 +26,7 @@ yarn start
 4. ESLint
 5. Prettier
 6. Axios
+
+## TODO
+
+1. Deletar repositório da lista.
