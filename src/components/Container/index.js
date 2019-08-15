@@ -6,7 +6,7 @@ const Container = styled.div`
 	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-	padding: 30px;
+	padding: 30px 0px;
 	margin: 80px auto;
 
 	h1 {
@@ -14,10 +14,22 @@ const Container = styled.div`
 		font-size: 20px;
 		flex-direction: row;
 		align-items: center;
+		padding: 0px 30px;
 
 		svg {
 			margin-right: 10px;
 		}
+	}
+
+	div.noissues {
+		color: #d00000;
+		background-color: #f1c9c9;
+		padding: 15px 30px;
+		font-size: 14px;
+		margin: 30px auto 0px auto;
+		max-width: 700px;
+		width: 90%;
+		border-radius: 4px;
 	}
 `;
 

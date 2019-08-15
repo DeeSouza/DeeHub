@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+
+export const load = keyframes`
+	0% {
+	  -webkit-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	}
+	100% {
+	  -webkit-transform: rotate(360deg);
+	  transform: rotate(360deg);
+	}
+`;
 
 export const Loading = styled.div`
 	color: #fff;
@@ -8,6 +19,25 @@ export const Loading = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+
+	.loader,
+	.loader:after {
+		border-radius: 50%;
+		width: 10em;
+		height: 10em;
+	}
+	.loader {
+		margin: 60px auto;
+		font-size: 10px;
+		position: relative;
+		text-indent: -9999em;
+		border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+		border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+		border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+		border-left: 1.1em solid #ffffff;
+		transform: translateZ(0);
+		animation: ${load} 1.1s infinite linear;
+	}
 `;
 
 export const Owner = styled.div`
@@ -19,6 +49,24 @@ export const Owner = styled.div`
 		text-decoration: none;
 		color: #7159c1;
 		font-size: 14px;
+		margin-left: 30px;
+		padding: 8px 12px;
+		border-radius: 4px;
+		transition: all 0.25s ease-in;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-self: flex-start;
+
+		span {
+			margin-left: 5px;
+		}
+
+		&:hover {
+			background-color: #7159c1;
+			color: #fff;
+		}
 	}
 
 	img {
@@ -43,7 +91,7 @@ export const Owner = styled.div`
 `;
 
 export const IssueList = styled.ul`
-	padding-top: 30px;
+	padding: 30px 30px 0px 30px;
 	border-top: 1px solid #eee;
 	margin-top: 30px;
 	list-style: none;
@@ -70,7 +118,7 @@ export const IssueList = styled.ul`
 			margin-left: 15px;
 
 			strong {
-				font-size: 16px;
+				font-size: 15px;
 
 				a {
 					text-decoration: none;
@@ -85,7 +133,7 @@ export const IssueList = styled.ul`
 					background-color: #eee;
 					color: #333;
 					border-radius: 3px;
-					font-size: 12px;
+					font-size: 11px;
 					font-weight: 400;
 					height: 24px;
 					padding: 3px 4px;
@@ -101,3 +149,41 @@ export const IssueList = styled.ul`
 		}
 	}
 `;
+
+export const Paginate = styled.div`
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+	margin-top: 30px;
+	padding: 0px 35px;
+	align-items: center;
+`;
+
+export const ButtonPaginatePrev = styled.button.attrs(props => ({
+	disabled: props.page === 1,
+}))`
+	width: 100px;
+	background-color: #fff;
+	border: 1px solid #7159c1;
+	border-radius: 5px;
+	padding: 5px 10px;
+	text-align: center;
+	color: #7159c1;
+	background: none;
+	transition: all 0.25s ease-out;
+
+	&[disabled] {
+		cursor: not-allowed;
+		opacity: 0.6;
+	}
+
+	&:hover {
+		background-color: #7159c1;
+		border: 1px solid #7159c1;
+		color: #fff;
+	}
+`;
+
+export const ButtonPaginateNext = styled(ButtonPaginatePrev).attrs(props => ({
+	disabled: props.amount < 30,
+}))``;

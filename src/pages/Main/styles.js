@@ -4,6 +4,7 @@ export const Form = styled.form`
 	margin-top: 20px;
 	display: flex;
 	flex-direction: row;
+	padding: 0px 30px;
 
 	input {
 		flex: 1;
@@ -12,6 +13,14 @@ export const Form = styled.form`
 		border-radius: 4px;
 		font-size: 16px;
 	}
+
+	${props =>
+		props.error &&
+		css`
+			input {
+				border: 1px solid #de5d5d;
+			}
+		`}
 `;
 
 export const rotate = keyframes`
@@ -56,14 +65,23 @@ export const List = styled.ul`
 	margin-top: 30px;
 
 	li {
-		padding: 15px 0px;
+		padding: 15px 30px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		transition: all 0.25s ease-out;
+
+		span {
+			font-weight: bold;
+		}
 
 		& + li {
 			border-top: 1px solid #eee;
+		}
+
+		&:hover {
+			background-color: #eee;
 		}
 
 		a {
