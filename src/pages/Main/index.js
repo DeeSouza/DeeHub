@@ -110,8 +110,11 @@ export default class Main extends Component {
 		return (
 			<Container>
 				<h1>
-					<FaGithubAlt />
-					Repositórios
+					<FaGithubAlt size={30} color="#7159c1" />
+					REPOSITÓRIOS
+					<small>
+						Digite abaixo o repositório para adicioná-lo na lista.
+					</small>
 				</h1>
 
 				<Form onSubmit={this.handleSubmit} error={error}>

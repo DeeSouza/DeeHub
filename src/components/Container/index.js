@@ -12,12 +12,22 @@ const Container = styled.div`
 	h1 {
 		display: flex;
 		font-size: 20px;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		padding: 0px 30px;
+		color: #5c5c5d;
 
 		svg {
 			margin-right: 10px;
+			margin-bottom: 15px;
+		}
+
+		small {
+			font-size: 12px;
+			color: #8a8a8a;
+			margin-top: 2px;
+			color: #757575;
 		}
 	}
 
