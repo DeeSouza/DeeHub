@@ -4,7 +4,6 @@ import {
 	FaArrowLeft,
 	FaArrowCircleLeft,
 	FaArrowCircleRight,
-	FaCircle,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import Container from '../../components/Container';

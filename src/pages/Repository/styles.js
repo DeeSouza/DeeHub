@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const load = keyframes`
 	0% {
@@ -87,6 +87,7 @@ export const Owner = styled.div`
 		line-height: 1.4;
 		text-align: center;
 		max-width: 400px;
+		width: 90%;
 	}
 `;
 
