@@ -162,11 +162,11 @@ export const Paginate = styled.div`
 export const ButtonPaginatePrev = styled.button.attrs(props => ({
 	disabled: props.page === 1,
 }))`
-	width: 100px;
+	width: 30px;
+	height: 30px;
 	background-color: #fff;
-	border: 1px solid #7159c1;
+	border: none;
 	border-radius: 5px;
-	padding: 5px 10px;
 	text-align: center;
 	color: #7159c1;
 	background: none;
@@ -177,10 +177,8 @@ export const ButtonPaginatePrev = styled.button.attrs(props => ({
 		opacity: 0.6;
 	}
 
-	&:hover {
-		background-color: #7159c1;
-		border: 1px solid #7159c1;
-		color: #fff;
+	&:hover:not([disabled]) {
+		opacity: 0.8;
 	}
 `;
 

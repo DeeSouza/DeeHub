@@ -12,6 +12,7 @@ export const Form = styled.form`
 		padding: 10px 15px;
 		border-radius: 4px;
 		font-size: 16px;
+		width: 100%;
 	}
 
 	${props =>
@@ -74,6 +75,10 @@ export const List = styled.ul`
 
 		span {
 			font-weight: bold;
+			width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		& + li {

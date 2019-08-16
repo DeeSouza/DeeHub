@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import {
+	FaArrowLeft,
+	FaArrowCircleLeft,
+	FaArrowCircleRight,
+	FaCircle,
+} from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import Container from '../../components/Container';
 import {
@@ -166,7 +171,7 @@ export default class Repository extends Component {
 							type="button"
 							onClick={() => this.setState({ page: page - 1 })}
 						>
-							ANTERIOR
+							<FaArrowCircleLeft size={28} />
 						</ButtonPaginatePrev>
 
 						<div>
@@ -180,7 +185,7 @@ export default class Repository extends Component {
 							type="button"
 							onClick={() => this.setState({ page: page + 1 })}
 						>
-							PRÓXIMO
+							<FaArrowCircleRight size={28} />
 						</ButtonPaginateNext>
 					</Paginate>
 				)}
