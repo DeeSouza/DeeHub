@@ -166,7 +166,6 @@ export default class Repository extends Component {
 						{/* Prev Button Paginate */}
 						<ButtonPaginatePrev
 							page={page}
-							amount={issues.length}
 							type="button"
 							onClick={() => this.setState({ page: page - 1 })}
 						>

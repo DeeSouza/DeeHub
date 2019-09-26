@@ -66,7 +66,7 @@ export default class Main extends Component {
 			const hasRepo = this.checkExistsRepo(newRepo);
 
 			if (hasRepo) {
-				throw new Error('repo_exist');
+				throw new Error('REPO_EXISTS');
 			}
 
 			// Call API
@@ -87,7 +87,7 @@ export default class Main extends Component {
 				position: toast.POSITION.BOTTOM_CENTER,
 			});
 		} catch (err) {
-			if (err.message === 'repo_exist') {
+			if (err.message === 'REPO_EXISTS') {
 				toast.warn('Você já adicionou esse repositório! 🤦‍🤦‍🤦‍ ', {
 					position: toast.POSITION.BOTTOM_CENTER,
 				});
