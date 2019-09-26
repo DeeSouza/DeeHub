@@ -90,7 +90,7 @@ export const List = styled.ul`
 		}
 
 		a {
-			color: #7159c1;
+			color: #000;
 			text-decoration: none;
 		}
 	}
